@@ -10,7 +10,9 @@ const Country = ({country, handleVisitedCountry}) => {
         setVisited(!visited)
     }
 
-    console.log(handleVisitedCountry)
+    const noParamFunction = () =>{
+        handleVisitedCountry(country)
+    }
 
     return (
         <div className={`country ${visited? "visited" : ""}`}>
@@ -19,7 +21,7 @@ const Country = ({country, handleVisitedCountry}) => {
             <p>Population: {population}</p>
             <p>Area: {area}</p>
             <p><small>Code: {cca3}</small></p>
-            <button>Mark visited</button>
+            <button onClick={noParamFunction}>Mark visited</button>
             <br />
             <button onClick={handleVisited}>{visited? "Visited" : "Going"}</button>
             <br />
