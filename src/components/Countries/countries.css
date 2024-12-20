@@ -7,3 +7,7 @@
 .visited{
     background-color: burlywood;
 }
+
+.flag-container{
+    width: 100px;
+}
